@@ -1,13 +1,16 @@
 package com.example.demo.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
 @Entity
-@Table(name="pacients")
-
+@Data
 public class Pacient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

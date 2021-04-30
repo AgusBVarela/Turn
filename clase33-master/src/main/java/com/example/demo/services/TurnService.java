@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import com.example.demo.dto.TurnDTO;
 import com.example.demo.entities.Turn;
 import com.example.demo.repositories.ITurnRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,8 @@ public class TurnService implements ITurnService{
         return this.turnRepository.findAll();
     }
 
-    public void setTurn(Turn turn){
+    public void setTurn(TurnDTO turn){
+        Turn turn
         this.turnRepository.save(turn);
     }
 

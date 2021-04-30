@@ -1,16 +1,14 @@
 package com.example.demo.dto;
 
+import com.example.demo.entities.Pacient;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DentistDTO {
-    private int idDentist;
-    private String name;
-    private String lastName;
-    private int dni;
+public class TurnDTO {
+    private PacientDTO pacient;
+    private DentistDTO dentist;
 }

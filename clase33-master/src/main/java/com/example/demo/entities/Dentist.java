@@ -1,11 +1,16 @@
 package com.example.demo.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name="dentists")
+@Data
 public class Dentist {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +23,6 @@ public class Dentist {
     private String phone;
     private String mail;
     private String code;
-    @OneToMany(mappedBy = "dentist")
-    private List<Diary> diaries;
+   @OneToMany(mappedBy = "dentist")
+    private Set<Turn> turns;
 }

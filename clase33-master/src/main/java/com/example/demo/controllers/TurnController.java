@@ -21,7 +21,7 @@ public class TurnController {
     }
 
     @PostMapping("/setTurn")
-    public void setTurn(@RequestBody Turn turn){
+    public void setTurn(@RequestBody TurnDTO turn){
         this.service.setTurn(turn);
     }
 
